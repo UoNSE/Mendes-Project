@@ -14,13 +14,13 @@
  * You should have received a copy of the Lesser GNU General Public License
  * along with Project Mendes. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.uonse.mendes.agent;
+package org.uonse.mendes.engine;
 
 /**
- * This unit test is for testing the main Mendes Agent class.
+ * This is for testing the main interface to the engine.
  *
  * @author Trent Houliston
  */
-public class AgentTest
+public class EngineTest
 {
 }

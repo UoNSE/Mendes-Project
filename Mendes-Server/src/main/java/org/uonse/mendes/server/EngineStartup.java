@@ -14,13 +14,29 @@
  * You should have received a copy of the Lesser GNU General Public License
  * along with Project Mendes. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.uonse.mendes.agent;
+package org.uonse.mendes.server;
+
+import javax.servlet.ServletContextEvent;
+import javax.servlet.ServletContextListener;
+import org.uonse.mendes.engine.Engine;
 
 /**
- * This unit test is for testing the main Mendes Agent class.
+ * Web application lifecycle listener.
  *
- * @author Trent Houliston
+ * @author trent
  */
-public class AgentTest
+public class EngineStartup implements ServletContextListener
 {
+
+	@Override
+	public void contextInitialized(ServletContextEvent sce)
+	{
+		Engine.getEngine().startup();
+	}
+
+	@Override
+	public void contextDestroyed(ServletContextEvent sce)
+	{
+		Engine.getEngine().shutdown();
+	}
 }

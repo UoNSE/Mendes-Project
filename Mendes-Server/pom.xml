@@ -17,11 +17,12 @@
 	<packaging>war</packaging>
 
 	<dependencies>
-		<!-- Hibernate -->
+
+		<!-- The Mendes keyword mining engine -->
 		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-entitymanager</artifactId>
-			<version>4.1.8.Final</version>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>mendes-engine</artifactId>
+			<version>${project.version}</version>
 			<scope>compile</scope>
 		</dependency>
 
