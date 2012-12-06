@@ -14,7 +14,7 @@
  * You should have received a copy of the Lesser GNU General Public License
  * along with Project Mendes. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.uonse.mendes.server.database;
+package org.uonse.mendes.engine.database;
 
 import java.util.HashSet;
 import java.util.Set;
