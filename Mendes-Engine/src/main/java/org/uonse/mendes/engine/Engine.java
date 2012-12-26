@@ -19,7 +19,6 @@ package org.uonse.mendes.engine;
 /**
  * This is a placeholder for the Engine
  *
- * Testing commit
  * @author Trent Houliston
  */
 public class Engine
