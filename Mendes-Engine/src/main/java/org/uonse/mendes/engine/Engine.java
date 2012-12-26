@@ -17,66 +17,10 @@
 package org.uonse.mendes.engine;
 
 /**
- * This class is responsible for managing the global operations of the Engine.
+ * This is a placeholder for the Engine
  *
  * @author Trent Houliston
  */
 public class Engine
 {
-
-	/**
-	 * Startup the engine. This involves starting up the agent manager, updating
-	 * and setting up the database, and setting up the interface to be used by
-	 * the client.
-	 */
-	public void startup()
-	{
-	}
-
-	/**
-	 * Shutdown the engine. This involves stopping the agent manager and
-	 * informing all of the active agents, closing all connections to the
-	 * database, and finishing all active requests by the client.
-	 */
-	public void shutdown()
-	{
-	}
-
-	/**
-	 * This constructs singleton Engine object
-	 */
-	private Engine()
-	{
-	}
-
-	/**
-	 * This method is overloaded as you should not be able to clone a singleton
-	 * object
-	 *
-	 * @return does not return, throws exception
-	 *
-	 * @throws CloneNotSupportedException
-	 */
-	@Override
-	public Object clone() throws CloneNotSupportedException
-	{
-		throw new CloneNotSupportedException();
-	}
-
-	public static Engine getEngine()
-	{
-		return Singleton.INSTANCE;
-	}
-
-	/**
-	 * This class holds the singleton instance of the Engine
-	 */
-	private static final class Singleton
-	{
-
-		/**
-		 * The singleton instance of the engine
-		 */
-		private static final Engine INSTANCE = new Engine();
-	}
 }

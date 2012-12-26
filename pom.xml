@@ -13,9 +13,9 @@
 
 	<!-- The submodules of this project -->
 	<modules>
+		<module>Mendes-Input</module>
 		<module>Mendes-Engine</module>
-		<module>Mendes-Agent</module>
-		<module>Mendes-Server</module>
+		<module>Mendes-Display</module>
 	</modules>
 
 	<!-- Developer Information -->

@@ -11,9 +11,9 @@
 
 	<!-- Artifact Details -->
 	<groupId>org.uonse</groupId>
-	<artifactId>mendes-engine</artifactId>
+	<artifactId>mendes-input</artifactId>
 	<version>0.1-SNAPSHOT</version>
-	<name>Mendes Engine</name>
+	<name>Mendes Input</name>
 	<packaging>jar</packaging>
 
 	<dependencies>
@@ -33,7 +33,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>2.5.1</version>
+				<version>3.0</version>
 				<configuration>
 					<source>1.6</source>
 					<target>1.6</target>
@@ -48,6 +48,9 @@
 				<configuration>
 					<archive>
 						<index>true</index>
+						<manifest>
+							<mainClass>org.uonse.mendes.agent.Agent</mainClass>
+						</manifest>
 					</archive>
 				</configuration>
 			</plugin>
@@ -112,6 +115,6 @@
 	</build>
 
 	<properties>
-		<project.mainClass>org.uonse.mendes.engine.Engine</project.mainClass>
+		<project.mainClass>org.uonse.mendes.input.Input</project.mainClass>
 	</properties>
 </project>

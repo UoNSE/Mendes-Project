@@ -14,13 +14,13 @@
  * You should have received a copy of the Lesser GNU General Public License
  * along with Project Mendes. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.uonse.mendes.engine;
+package org.uonse.mendes.input;
 
 /**
- * This is a placeholder for unit tests for the engine
+ * This is a placeholder unit test for the Input
  *
  * @author Trent Houliston
  */
-public class EngineTest
+public class InputTest
 {
 }
