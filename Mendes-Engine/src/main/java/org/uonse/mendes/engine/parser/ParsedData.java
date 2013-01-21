@@ -18,6 +18,7 @@ package org.uonse.mendes.engine.parser;
 
 import java.net.URI;
 import java.util.HashMap;
+import java.util.Map;
 
 /**
  * This object holds the parsed data (the keywords to frequency map) as well as
@@ -31,7 +32,7 @@ public class ParsedData
 	/**
 	 * The keywords to frequency map for this parsed data
 	 */
-	public final HashMap<String, Integer> keywords = new HashMap<String, Integer>(0);
+	public final Map<String, Integer> keywords;
 	/**
 	 * The source of this data
 	 */
@@ -46,10 +47,12 @@ public class ParsedData
 	 *
 	 * @param source    the source to set
 	 * @param timestamp the timestamp to set
+	 * @param keywords  the results of the analysis
 	 */
-	public ParsedData(URI source, long timestamp)
+	public ParsedData(URI source, long timestamp, Map<String, Integer> keywords)
 	{
 		this.source = source;
 		this.timestamp = timestamp;
+		this.keywords = keywords;
 	}
 }

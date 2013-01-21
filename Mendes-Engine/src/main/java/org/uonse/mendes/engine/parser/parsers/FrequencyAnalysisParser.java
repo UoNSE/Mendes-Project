@@ -16,6 +16,8 @@
  */
 package org.uonse.mendes.engine.parser.parsers;
 
+import java.util.HashMap;
+import java.util.Map;
 import org.uonse.mendes.engine.parser.ParsedData;
 import org.uonse.mendes.engine.parser.Parser;
 import org.uonse.mendes.input.output.ParsableData;
@@ -35,7 +37,43 @@ public class FrequencyAnalysisParser implements Parser
 	@Override
 	public ParsedData parse(ParsableData data)
 	{
-		//TODO write the parser
-		throw new UnsupportedOperationException("Not supported yet.");
+		//Get our frequency map
+		Map<String, Integer> frequencies = getFrequencies(data.getText());
+
+		//Return our parsed data
+		return new ParsedData(data.getSourceURI(), data.getTimestamp(), frequencies);
+	}
+
+	/**
+	 * This method calculates the number of times each token (consecutive non
+	 * whitespace characters) appears in the passed {@link String}
+	 *
+	 * @param data the data to be parsed
+	 *
+	 * @return a map of keyword to frequencies
+	 */
+	private Map<String, Integer> getFrequencies(String data)
+	{
+		//Create a map to hold our results
+		HashMap<String, Integer> map = new HashMap<String, Integer>(10);
+
+		//We don't care about case or if there is punctuation at the end of a word
+		String txt = data.toLowerCase().replaceAll("(\\w+)[.,;]+", "$1");
+
+		//Go through the string word by word
+		for (String s : txt.split("\\s+"))
+		{
+			//If we don't have the key yet then initialize it at 0
+			if (!map.containsKey(s))
+			{
+				map.put(s, 0);
+			}
+
+			//Add one to the count
+			map.put(s, map.get(s) + 1);
+		}
+
+		//Return the map
+		return map;
 	}
 }
